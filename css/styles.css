@@ -40,19 +40,20 @@ body {
 
 /* HEADER */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    height: 7rem;
-    max-width: 1200px;
-    margin: auto;
     background-color: #fbfbfb;
     box-shadow: 0px 4px 4px #cccccc;
 }
 
 nav {
-    width: calc(100% - 8rem);
+    width: calc(100% - 9.5rem);
 }
 
 nav ul {
@@ -67,6 +68,14 @@ nav li {
     padding: 0 1rem;
 }
 
+nav li a{
+    color: inherit;
+}
+
+nav li a:hover {
+    color: #9e3d8b;
+}
+
 .logo {
     height:5rem;
     border-radius: 50%;
@@ -76,7 +85,16 @@ nav li {
 /* MAIN */
 main {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+section {
+    padding: 1.5rem;
+}
+
+article {
+    min-height: calc(100vh - 180px);
+    margin-top:90px;
 }
 
 h1 {
@@ -91,26 +109,17 @@ h2 {
     padding: 1.5rem 0;
 }
 
-section {
-    padding: 0 1.5rem;
+p {
+    text-align: center;
+    padding: 20px 0;
 }
 
-article {
-    margin: 2rem auto 5rem;
-}
-
-.contacto {
-    background-color: rgba(175, 89, 158, 0.3);
-    border-radius: 0.5rem;
-    padding: 1rem 1rem 2rem;
-}
-
-.gatito {
+.imagen-ppal {
     display: flex;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     border-radius: 50%;
-    margin: 0 auto;
+    margin: 100px auto 0;
 }
 
 .boton {
@@ -131,6 +140,13 @@ article {
     background-color: #9e3d8b;
 }
 
+.contacto {
+    background-color: rgba(175, 89, 158, 0.3);
+    color: #0f0f0f;
+    border-radius: 0.6rem;
+    padding: 1rem 1rem 2rem;
+}
+
 .social {
     display:flex;
     flex-direction: row;
@@ -147,16 +163,27 @@ article {
     transform: scale(110%);
 }
 
+/* FOOTER */
 footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 90px;
     background-color: #af599e;
-    color: #fbfbfb;
     font-size: 16px;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
 }
+
+footer a {
+    color: #fbfbfb;
+}
+
+footer a:hover {
+    color: #0f0f0f;
+}
+
+
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
 *    "estilos generales". Una buena idea sería comenzar por el <body> ;)
